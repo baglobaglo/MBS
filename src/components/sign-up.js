@@ -5,6 +5,7 @@ function Signup() {
   return (
     <div id="sign-up-div">
       <h3>Sign-up component</h3>
+      
     </div>
   );
 }

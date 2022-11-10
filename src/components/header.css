@@ -1,8 +1,8 @@
 #header-div {
+    text-align: center;
     background-color: beige;
     padding-top: 1em;
     padding-bottom: 1em;
-    padding-left: 5%;
 }
 
 #header-mbs-name {
