@@ -13,6 +13,7 @@ function Login() {
     if (username === 'Sebb' && password === '123') {
       alert('Correct, logged in');
       /* Link to new page */
+      /* HELP */
     } else {
       alert('Credentials dont match');
     }
