@@ -1,4 +1,10 @@
-#test-login {
-    color:blue;
+
+.login-div {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: blanchedalmond;
+}
+
+.login-form {
     padding-left: 5%;
 }
