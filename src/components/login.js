@@ -2,7 +2,7 @@ import React from 'react';
 import './login.css';
 import { useState } from 'react';
 import Signup from './sign-up';
-
+import raw from './test.txt';
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -10,12 +10,16 @@ function Login() {
 
   const submitForm = (event) => {
     event.preventDefault();
-    if (username === 'Sebb' && password === '123') {
-      alert('Correct, logged in');
-      /* Link to new page */
-    } else {
-      alert('Credentials dont match');
-    }
+    fetch(raw)
+      .then((r) => r.text())
+      .then((text) => {
+        if (text.includes(username) && text.includes(password)) {
+          alert('login');
+          //insert link to catalog page here
+        } else {
+          alert('Sorry, but your credentials dont match');
+        }
+      });
   };
 
   return (
@@ -27,8 +31,8 @@ function Login() {
         <Signup />
       ) : (
         <div className="login-div">
+          <h3>Login for MBS</h3>
           <form className="login-form" onSubmit={submitForm}>
-            <h3>Login for MBS</h3>
             <label>
               {' '}
               Enter your username/email:
