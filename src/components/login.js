@@ -24,8 +24,10 @@ function Login() {
 
   return (
     <div>
-      <label type="text">Not a user?</label>
-      <button onClick={() => setNotuser(true)}>Sign up</button>
+      <div className="not-a-user">
+        <label type="text">Not a user? </label>
+        <button onClick={() => setNotuser(true)}>Sign up</button>
+      </div>
 
       {notuser ? (
         <Signup />
