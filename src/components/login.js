@@ -3,6 +3,7 @@ import './login.css';
 import { useState } from 'react';
 import Signup from './sign-up';
 import raw from './test.txt';
+
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -33,7 +34,7 @@ function Login() {
         <Signup />
       ) : (
         <div className="login-div">
-          <h3>Login for MBS</h3>
+          <h3> LOGIN </h3>
           <form className="login-form" onSubmit={submitForm}>
             <label>
               {' '}
