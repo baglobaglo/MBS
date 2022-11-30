@@ -26,7 +26,7 @@ function Purchase() {
         <div id="purchase-div">
           <h3> PURCHASE TICKETS </h3>
             <body>
-                {//Movie Info (if we have time)
+                {//Movie Info
                 }
 
 
