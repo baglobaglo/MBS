@@ -21,6 +21,8 @@ function Purchase() {
             alert('Check the information provided.');
         
       };
+
+
     
       return (
         <div id="purchase-div">
