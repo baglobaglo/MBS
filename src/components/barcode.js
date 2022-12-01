@@ -18,9 +18,9 @@ function Barcode() {
                 }
                 <h4> Purchase Information </h4>
                 <form action="/barcode-page" onSubmit={Barcode}>
-                Barcode:{' '}
-                {Barcode()}
-                {' '}
+                  Barcode:{' '}
+                    {Barcode()}
+                  {' '}
                 </form>
             </body>
         </div>
