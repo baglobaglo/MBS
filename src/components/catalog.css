@@ -1,8 +1,10 @@
-#catalog-div {
-    text-align: center;
+.mbs-show > .row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+
+
 }
 
-.posters{
-    width: 350px;
-	height: 450px;
-}
+
+
+
