@@ -9,8 +9,7 @@ function Signup() {
   const [registerHome, setRegisterHome] = useState('');
   const [registerPhone, setRegisterPhone] = useState('');
   const [registerPassword, setRegisterPassword] = useState('');
-  const [registerPasswordSecond, setRegisterPasswordSecond] =
-    useState('');
+  const [registerPasswordSecond, setRegisterPasswordSecond] = useState('');
 
   const submitRegister = () => {
     if (
