@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CurrentMovies from './current-movies';
 import UpcomingMovies from './upcoming-movies';
 import Purchase from './purchase';
-import { toBeEmpty } from '@testing-library/jest-dom/dist/matchers';
 
 const Catalog = () => {
   const [currentMovies, setCurrentMovies] = useState([
@@ -100,7 +99,7 @@ const Catalog = () => {
   return (
     <div className="container-fluid mbs-show">
       {movieClicked === 'none' && (
-        <div>
+        <div className="container-fluid mbs-show">
           <h2> Current movies</h2> <br />
           <div className="row">
             <CurrentMovies
