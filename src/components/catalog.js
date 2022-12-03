@@ -4,7 +4,7 @@ import './general.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CurrentMovies from './current-movies';
 import UpcomingMovies from './upcoming-movies';
-import Purchase from './purchase';
+//import Purchase from './purchase';
 
 const Catalog = () => {
   const [currentMovies, setCurrentMovies] = useState([
@@ -79,10 +79,12 @@ const Catalog = () => {
   const [movieClicked, setMovieClicked] = useState('none');
   const [movieClickedObject, setMovieClikedObject] = useState();
   const [clikedPurchase, setClickedPurchase] = useState(false);
+  const buytickets = useNavigate();
 
   const handlePurchaseButton = () => {
     setClickedPurchase(true);
     setMovieClikedObject();
+    buytickets('/purchase');
   };
 
   const moreInformation = (Title) => {
@@ -134,11 +136,7 @@ const Catalog = () => {
           </button>
         </div>
       )}
-      {clikedPurchase && (
-        <div>
-          <Purchase />
-        </div>
-      )}
+      {clikedPurchase}
     </div>
   );
 };

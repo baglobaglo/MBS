@@ -61,7 +61,8 @@ function Purchase() {
             onChange={(e) => setCardCVS(e.target.value)}
           />{' '}
           <br />
-          <button type="Submit"> Submit </button>
+          <button type="Submit"> Submit </button> {//add link to barcode once added
+}
         </form>
       </body>
     </div>
