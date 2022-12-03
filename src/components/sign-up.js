@@ -10,7 +10,8 @@ function Signup() {
   const [registerHome, setRegisterHome] = useState('');
   const [registerPhone, setRegisterPhone] = useState('');
   const [registerPassword, setRegisterPassword] = useState('');
-  const [registerPasswordSecond, setRegisterPasswordSecond] = useState('');
+  const [registerPasswordSecond, setRegisterPasswordSecond] =
+    useState('');
 
   const submitRegister = () => {
     if (
@@ -29,12 +30,11 @@ function Signup() {
     }
   };
 
- const isRegistered = useNavigate();
+  const isRegistered = useNavigate();
 
-function SignedUp()
-{
-  isRegistered('/Login')
-}
+  function SignedUp() {
+    isRegistered('/Login');
+  }
 
   return (
     <div id="sign-up-div">
@@ -85,7 +85,10 @@ function SignedUp()
             }
           />{' '}
           <br />
-          <button type="Register" onClick={() => SignedUp()}> Register </button>
+          <button type="Register" onClick={() => SignedUp()}>
+            {' '}
+            Register{' '}
+          </button>
         </form>
       </body>
     </div>
