@@ -8,6 +8,7 @@ function Purchase() {
   const [cardNumber, setCardNumber] = useState('');
   const [expDate, setExpDate] = useState('');
   const [cardCVS, setCardCVS] = useState('');
+  const [tickets, setTickets] = useState(0);
 
   const Purchase = () => {
     if (
@@ -22,15 +23,24 @@ function Purchase() {
 
   return (
     <div id="purchase-div">
-      <h3> PURCHASE TICKETS FOR </h3>
+      <h3> PURCHASE TICKETS </h3> <br />
       <body>
-        {
-          //Movie Info
-        }
-
-        {
-          //Card Info
-        }
+        <div className="tickets-details">
+          <h6>How many ticket do you want?</h6>
+          <button onClick={() => setTickets(tickets + 1)}>+</button>
+          <p>
+            Number of tickets: {tickets} <br /> Tickets left for this
+            movie: {95 - tickets} <br />
+          </p>
+          <h6>At what city will you be watching this movie?:</h6>
+          <select name="city" id="city">
+            <option value="Lubbock">Lubbock</option>
+            <option value="Amarillo">Amarillo</option>
+            <option value="San Antonio">San Antonio</option>
+            <option value="Odessa">Odessa</option>
+          </select>
+        </div>
+        <br /> <br />
         <h4> Card Information </h4>
         <form action="/purchase-page" onSubmit={Purchase}>
           Card Name:{' '}
