@@ -4,7 +4,9 @@
 
 }
 
-
+.description-break {
+    white-space: pre-wrap;
+}
 
 
 

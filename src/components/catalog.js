@@ -9,71 +9,71 @@ import Purchase from './purchase';
 const Catalog = () => {
   const [currentMovies, setCurrentMovies] = useState([
     {
-      Title: 'StarWars the fall of Tommy dang',
-      ReleaseDate: '1998',
-      Price: '40$',
-      Description: 'Funny movie for friends and family',
+      Title: 'Black Adam',
+      ReleaseDate: '10/21/22',
+      Price: '$8.25',
+      Description: 'SYNOPSIS: Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods--and imprisoned just as quickly--Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world. \n CAST: Dwayne Johnson, Aldis Hodge, Noah Centineo, Sarah Shahi, Marwan Kenzari \n RUNTIME: 125 minutes \n CRITICS CONSENSUS: Black Adam may end up pointing the way to an exciting future for DC films, but as a standalone experience, it is a wildly uneven letdown. \n AUDIENCE SAYS: With lots of action, solid effects, and a story you do not have to be a comics fan to follow, Black Adam is one of the best DC movies to date.',
       Poster:
-        'https://media.discordapp.net/attachments/1025272411723145277/1040310343743836241/SWnewhope.png?width=200&height=300',
+        'https://www.filmsxpress.com/images/posters/459/Adam.png',
     },
     {
-      Title: 'StarTrek rise of Gaylor',
-      ReleaseDate: '1999',
-      Price: '50$',
-      Description: 'Not funny',
+      Title: 'Smile',
+      ReleaseDate: '9/30/22',
+      Price: '$8.25',
+      Description: 'SYNOPSIS: After witnessing a bizarre, traumatic incident involving a patient, Dr. Rose Cotter starts experiencing frightening occurrences that she can not explain. She must confront her troubling past in order to survive and escape her horrifying new reality. \n CAST: Sosie Bacon, Jessie T. Usher, Kyle Gallner, Robin Weigert, Caitlin Stasey \n RUNTIME: 116 minutes \n CRITICS CONSENSUS: Deeply creepy visuals and a standout Sosie Bacon further elevate Smile\'s unsettling exploration of trauma, adding up to the rare feature that satisfyingly expands on a short. \n AUDIENCE SAYS: You may need to pay close attention in order to keep up with the story, but fans of slow-burning horror should leave Smile with a grin.',
       Poster:
-        'https://media.discordapp.net/attachments/1025272411723145277/1027068197544931328/DangMatic.png?width=200&height=300',
+        'https://www.filmsxpress.com/images/posters/459/Smile.png',
     },
     {
-      Title: 'Test3',
-      ReleaseDate: '2000',
-      Price: '',
-      Description: '',
+      Title: 'Black Panther: Wakanda Forever',
+      ReleaseDate: '11/11/22',
+      Price: '$8.25',
+      Description: 'SYNOPSIS: Queen Ramonda, Shuri, M\'Baku, Okoye and the Dora Milaje, fight to protect their nation from intervening world powers in the wake of King T\'Challa\'s death. As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda. \n CAST: Letitia Wright, Angela Bassett, Lupita Nyong\'o, Danai Gurira, Winston Duke \n RUNTIME: 161 minutes \n CRITICS CONSENSUS: A poignant tribute that satisfyingly moves the franchise forward, Black Panther: Wakanda Forever marks an ambitious and emotionally rewarding triumph for the MCU. \n AUDIENCE SAYS: Black Panther: Wakanda Forever says a solemn goodbye to one of the MCU\'s most beloved stars without skimping on the action.',
       Poster:
-        'https://media.discordapp.net/attachments/1025272411723145277/1040310343743836241/SWnewhope.png?width=200&height=300',
+        'https://www.movienewsletters.net/photos/297863H1.jpg',
     },
     {
-      Title: 'Test4',
-      ReleaseDate: '2001',
-      Price: '',
-      Description: '',
+      Title: 'The Menu',
+      ReleaseDate: '11/18/22',
+      Price: '$8.25',
+      Description: 'SYNOPSIS: A couple travels to a coastal island to eat at an exclusive restaurant where the chef has prepared a lavish menu, with some shocking surprises. \n CAST: Anya Taylor-Joy, Ralph Fiennes, Nicholas Hoult, John Leguizamo, Janet McTeer \n RUNTIME: 107 minutes \n CRITICS CONSENSUS: While its social commentary relies on basic ingredients, The Menu serves up black comedy with plenty of flavor. \n AUDIENCE SAYS: The Menu\'s got a great cast and plenty of fun moments, although the ending might strike some as a little tough to swallow.',
       Poster:
-        'https://media.discordapp.net/attachments/1025272411723145277/1040310343743836241/SWnewhope.png?width=200&height=300',
+        'https://www.filmsxpress.com/images/posters/459/The%20Menu%20.png',
     },
   ]);
 
   const [upcomingMovies, setUpcomingMovies] = useState([
     {
-      Title: '',
-      ReleaseDate: '',
-      Price: '',
-      Description: '',
+      Title: 'Avatar: The Way of Water',
+      ReleaseDate: '12/16/22',
+      Price: '$8.25',
+      Description: 'SYNOPSIS: "Avatar The Way of Water" begins to tell the story of the Sully family (Jake, Neytiri and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive and the tragedies they endure. \n CAST: Zoe Saldana, Sigourney Weaver, Sam Worthington, Stephen Lang \n RUNTIME: 192 minutes',
       Poster:
-        'https://media.discordapp.net/attachments/1025272411723145277/1040310343743836241/SWnewhope.png?width=200&height=300',
+        'https://www.filmsxpress.com/images/posters/459/Avatar%202.png',
     },
     {
-      Title: '',
-      ReleaseDate: '',
-      Price: '',
-      Description: '',
+      Title: 'Babylon',
+      ReleaseDate: '12/23/22',
+      Price: '$8.25',
+      Description: 'SYNOPSIS: From Damien Chazelle, BABYLON is an original epic set in 1920s Los Angeles . A tale of outsized ambition and outrageous excess, it traces the rise and fall of multiple characters during an era of unbridled decadence and depravity in early Hollywood. \n CAST: Brad Pitt, Margot Robbie, Diego Calva, Jean Smart, Jovan Adepo \n RUNTIME: 188 minutes',
       Poster:
-        'https://media.discordapp.net/attachments/1025272411723145277/1040310343743836241/SWnewhope.png?width=200&height=300',
+        'https://www.filmsxpress.com/images/posters/459/babylon.png',
     },
     {
-      Title: '',
-      ReleaseDate: '',
-      Price: '',
-      Description: '',
+      Title: 'Plane',
+      ReleaseDate: '1/13/23',
+      Price: '$8.25',
+      Description: 'SYNOPSIS: In the white-knuckle action movie PLANE, pilot Brodie Torrance saves his passengers from a lightning strike by making a risky landing on a war-torn island - only to find that surviving the landing was just the beginning. \n CAST: Gerard Butler, Daniella Pineda, Tony Goldwyn, Mike Colter, Yoson An \n RUNTIME: 107 minutes',
       Poster:
-        'https://media.discordapp.net/attachments/1025272411723145277/1040310343743836241/SWnewhope.png?width=200&height=300',
+        'https://www.filmsxpress.com/images/posters/459/Plane.png',
     },
     {
-      Title: '',
-      ReleaseDate: '',
-      Price: '',
-      Description: '',
+      Title: 'I Wanna Dance With Somebody',
+      ReleaseDate: '12/21/22',
+      Price: '$8.25',
+      Description: 'SYNOPSIS: Naomi Ackie stars as Whitney Houston in the musical biopic, which is based on the epic life and music of the iconic singer. The film will take audiences on an emotional, energetic journey through Houston\'s career and music. \n CAST: Naomi Ackie, Stanley Tucci, Ashton Sanders, Tamara Tunie, Nafessa Williams \n RUNTIME: 146 minutes',
       Poster:
-        'https://media.discordapp.net/attachments/1025272411723145277/1040310343743836241/SWnewhope.png?width=200&height=300',
+        'https://www.filmsxpress.com/images/posters/459/Wanna%20Dance.png',
     },
   ]);
   const [movieClicked, setMovieClicked] = useState('none');
@@ -123,11 +123,11 @@ const Catalog = () => {
               alt="failed to load"
             ></img>
             <p>
-              Movie was released: {movieClickedObject.ReleaseDate}
+              Release Date: {movieClickedObject.ReleaseDate}
             </p>
-            <p>Price pr. ticket: {movieClickedObject.Price}</p>
+            <p>Ticket Price: {movieClickedObject.Price}</p>
             <h5>Description:</h5>
-            <p>{movieClickedObject.Description}</p>
+            <p className="description-break">{movieClickedObject.Description}</p>
           </div>
           <button onClick={handlePurchaseButton}>
             Click here to buy tickets!
