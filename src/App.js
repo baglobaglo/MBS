@@ -5,6 +5,7 @@ import Login from './components/login';
 import Catalog from './components/catalog';
 import Purchase from './components/purchase';
 import Barcode from './components/Barcode';
+import Review from './components/review';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
       <Route path="/purchase" element={<Purchase />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Barcode" element={<Barcode />} />
+      <Route path="/Review" element={<Review />} />
 
       </Routes>
     </div>
