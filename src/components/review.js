@@ -11,7 +11,6 @@ function Review() {
               <h4> Share your experience! </h4>
               <form action="/purchase-page">
                 <textarea /><br/>
-                Rating: <input type="text" placeholder="1-5"/><br/>
                 <button type="Submit">Submit</button>
               </form>
             </body>
