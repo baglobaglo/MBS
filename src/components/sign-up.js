@@ -13,6 +13,8 @@ function Signup() {
   const [registerPasswordSecond, setRegisterPasswordSecond] =
     useState('');
 
+  const isRegistered = useNavigate();
+
   const submitRegister = () => {
     if (
       registerName.length > 2 &&
@@ -22,6 +24,7 @@ function Signup() {
     ) {
       if (registerPassword === registerPasswordSecond) {
         alert('Register successful!');
+        isRegistered('/Login');
       } else {
         alert('Passwords no match');
       }
@@ -30,17 +33,11 @@ function Signup() {
     }
   };
 
-  const isRegistered = useNavigate();
-
-  function SignedUp() {
-    isRegistered('/Login');
-  }
-
   return (
     <div id="sign-up-div">
       <h3> REGISTER </h3>
       <body>
-        <form action="/sign-up-page" onSubmit={submitRegister}>
+        <form>
           Full Name:{' '}
           <input
             value={registerName}
@@ -85,7 +82,7 @@ function Signup() {
             }
           />{' '}
           <br />
-          <button type="Register" onClick={() => SignedUp()}>
+          <button type="submit" onClick={() => submitRegister()}>
             {' '}
             Register{' '}
           </button>
