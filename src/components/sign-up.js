@@ -2,6 +2,7 @@ import React from 'react';
 import './sign-up.css';
 import './general.css';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Signup() {
   const [registerName, setRegisterName] = useState('');
@@ -27,6 +28,13 @@ function Signup() {
       alert('Check the information provided');
     }
   };
+
+ const isRegistered = useNavigate();
+
+function SignedUp()
+{
+  isRegistered('/Login')
+}
 
   return (
     <div id="sign-up-div">
@@ -77,7 +85,7 @@ function Signup() {
             }
           />{' '}
           <br />
-          <button type="Register"> Register </button>
+          <button type="Register" onClick={() => SignedUp()}> Register </button>
         </form>
       </body>
     </div>

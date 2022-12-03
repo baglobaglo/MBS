@@ -3,11 +3,15 @@ import './login.css';
 import { useState } from 'react';
 import Signup from './sign-up';
 import raw from './test.txt';
+import { useNavigate } from 'react-router-dom';
+
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [notuser, setNotuser] = useState(false);
+  //const [notuser, setNotuser] = useState(false);
+  const UserIsLoggedIn = useNavigate();
+  const SignUp = useNavigate();
 
   const submitForm = (event) => {
     event.preventDefault();
@@ -16,23 +20,25 @@ function Login() {
       .then((text) => {
         if (text.includes(username) && text.includes(password)) {
           alert('login');
-          //insert link to catalog page here
+            UserIsLoggedIn('/Catalog')
         } else {
           alert('Sorry, but your credentials dont match');
         }
       });
   };
+  function signUpbutton() 
+  {
+    SignUp('/Signup');
+  }
+
 
   return (
     <div>
       <div className="not-a-user">
         <label type="text">Not a user? </label>
-        <button onClick={() => setNotuser(true)}>Sign up</button>
+        <button onClick={() => signUpbutton()}>Sign up</button>
       </div>
 
-      {notuser ? (
-        <Signup />
-      ) : (
         <div className="login-div">
           <h3> LOGIN </h3>
           <form className="login-form" onSubmit={submitForm}>
@@ -53,10 +59,9 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <br />
-            <input type="submit"></input>
+            <input type="submit" onClick ={() => Login()}></input>
           </form>
         </div>
-      )}
     </div>
   );
 }
