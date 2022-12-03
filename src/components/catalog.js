@@ -4,6 +4,7 @@ import './general.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CurrentMovies from './current-movies';
 import UpcomingMovies from './upcoming-movies';
+import { useNavigate } from 'react-router-dom';
 //import Purchase from './purchase';
 
 const Catalog = () => {

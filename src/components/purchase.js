@@ -2,6 +2,7 @@ import React from 'react';
 import './login.css';
 import './general.css';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Purchase() {
   const [cardName, setCardName] = useState('');
@@ -9,7 +10,13 @@ function Purchase() {
   const [expDate, setExpDate] = useState('');
   const [cardCVS, setCardCVS] = useState('');
   const [tickets, setTickets] = useState(0);
+  const toBc = useNavigate();
 
+
+  function toBar()
+  {
+    toBc('/Barcode');
+  }
   const Purchase = () => {
     if (
       cardName.length > 2 &&
@@ -17,7 +24,10 @@ function Purchase() {
       expDate.length === 5 &&
       cardCVS.length === 3
     )
+    {
       alert('Payment successful!');
+    
+    }
     else alert('Check the information provided.');
   };
 
@@ -42,7 +52,7 @@ function Purchase() {
         </div>
         <br /> <br />
         <h4> Card Information </h4>
-        <form action="/purchase-page" onSubmit={Purchase}>
+        <form>
           Card Name:{' '}
           <input
             value={cardName}
@@ -71,7 +81,7 @@ function Purchase() {
             onChange={(e) => setCardCVS(e.target.value)}
           />{' '}
           <br />
-          <button type="Submit"> Submit </button> {//add link to barcode once added
+          <button type="Submit" onClick={() => toBar()}> Submit </button> {//add link to barcode once added
 }
         </form>
       </body>
