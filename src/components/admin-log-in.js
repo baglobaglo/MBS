@@ -5,7 +5,8 @@ import raw from './admin-login.txt';
 const AdminLogin = () => {
   const [adminname, setAdminName] = useState('');
   const [adminpassword, setAdminPassword] = useState('');
-  const UserIsLoggedIn = useNavigate();
+  //const UserIsLoggedIn = useNavigate();
+  const toADP = useNavigate();
 
   const loginAdmin = (event) => {
     event.preventDefault();
@@ -18,7 +19,8 @@ const AdminLogin = () => {
           text.includes(adminname) &&
           text.includes(adminpassword)
         ) {
-          UserIsLoggedIn('/Catalog');
+          //UserIsLoggedIn('/Catalog');
+          toADP('/AdminHP');
         } else {
           alert('Sorry, but your credentials dont match');
         }
