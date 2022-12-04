@@ -83,7 +83,10 @@ const Catalog = () => {
   const buytickets = useNavigate();
   const makereview = useNavigate();
 
-
+  const refreshCatalog = () =>
+  {
+    setMovieClicked('none');
+  }
   const ToReview = () => {
     makereview('/review');
   }
@@ -140,7 +143,9 @@ const Catalog = () => {
           <button onClick={handlePurchaseButton}>
             Click here to buy tickets!
           </button><br />
-          <button onClick={ ToReview }> Make Review</button>
+          <button onClick={ ToReview }> Make Review</button> <br/>
+          <button onClick={ refreshCatalog }> Back To Catalog</button> <br/>
+
         </div>
       )}
       {clikedPurchase}
