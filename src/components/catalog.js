@@ -85,9 +85,14 @@ const Catalog = () => {
     },
   ]);
   const [movieClicked, setMovieClicked] = useState('none');
+  const [movieClickedUpComing, setMovieClickedUpComing] =
+    useState('none');
   const [movieClickedObject, setMovieClikedObject] = useState();
-  const [clikedPurchase, setClickedPurchase] = useState(false);
+  const [movieClickedObjectUpComing, setMovieClikedObjectUpComing] =
+    useState();
+
   const [isAdmin, setIsAdmin] = useState(false);
+  const [removeButton, setRemoveButton] = useState(true);
   const buytickets = useNavigate();
   const makereview = useNavigate();
 
@@ -99,7 +104,6 @@ const Catalog = () => {
     makereview('/review');
   };
   const handlePurchaseButton = () => {
-    setClickedPurchase(true);
     setMovieClikedObject();
     buytickets('/purchase');
   };
@@ -110,6 +114,12 @@ const Catalog = () => {
 
   const moreInformation = (Title) => {
     setMovieClicked(Title);
+    setRemoveButton(false);
+  };
+
+  const moreInformationUpComing = (Title) => {
+    setMovieClickedUpComing(Title);
+    setRemoveButton(false);
   };
 
   const deleteMovie = (Title) => {
@@ -120,27 +130,68 @@ const Catalog = () => {
     );
   };
 
+  const deleteMovieUpComing = (Title) => {
+    setUpcomingMovies((upcoming) =>
+      upcoming.filter((upcomingMovies) => {
+        return upcomingMovies.Title !== Title;
+      })
+    );
+  };
+
   useEffect(() => {
     const info = currentMovies.find(
       (movie) => movie.Title === movieClicked
     );
     setMovieClikedObject(info);
-  }, [movieClicked, currentMovies]);
+
+    const infoUp = upcomingMovies.find(
+      (movieUp) => movieUp.Title === movieClickedUpComing
+    );
+    setMovieClikedObjectUpComing(infoUp);
+  }, [
+    movieClicked,
+    currentMovies,
+    upcomingMovies,
+    movieClickedUpComing,
+  ]);
 
   return (
     <div className="container-fluid mbs-show">
-      {!isAdmin && (
+      {!isAdmin && removeButton && (
         <div className="adminButton">
           <button onClick={activeAdmin}>Activate Admin</button>
         </div>
       )}
       {isAdmin && (
-        <div className="admin-details container-fluid">
-          <h1>System Manager</h1>
-          <p>Hello hello, work within this div</p>
+        <div>
+        <h1>System Manager</h1> <br/>
+        <div className="admin-details-container-fluid">
+          <div style={{padding: '20px'}}>
+            <h5>Ticket Information</h5>
+            <p> Black Adam: 73 tickets left <br/>
+                Smile: 54 tickets left <br/>
+                Black Panther: 39 tickets left <br/>
+                The Menu: 62 tickets left <br/>
+            </p>
+          </div>
+          <div style={{padding: '20px', marginLeft: '300px'}}>
+            <h5>Employee Information</h5>
+            <p> Lubbock: 22 employees <br/>
+                Amarillo: 15 employees <br/>
+                San Antonio: 19 employees <br/>
+                Odessa: 9 employees (Understaffed) <br/>
+            </p>
+          </div>
+          <div style={{padding: '20px', marginLeft: '290px'}}>
+            <h5>User Information</h5>
+            <p> Active: 517 accounts <br/>
+                Inactive: 43 accounts <br/>
+            </p>
+          </div>
         </div>
+      </div>
       )}
-      {movieClicked === 'none' && (
+      {movieClicked === 'none' && movieClickedUpComing === 'none' && (
         <div className="container-fluid mbs-show">
           <h2> Current movies</h2> <br />
           <div className="row">
@@ -154,7 +205,13 @@ const Catalog = () => {
           </div>
           <h2> Upcoming Movies</h2> <br />
           <div className="row">
-            <UpcomingMovies upcomingMovies={upcomingMovies} /> <br />
+            <UpcomingMovies
+              isAdmin={isAdmin}
+              upcomingMovies={upcomingMovies}
+              moreInformationUpComing={moreInformationUpComing}
+              deleteMovieUpComing={deleteMovieUpComing}
+            />{' '}
+            <br />
           </div>{' '}
         </div>
       )}
@@ -181,7 +238,27 @@ const Catalog = () => {
           <button onClick= { refreshCatalog }> Return to Catalog </button>
         </div>
       )}
-      {clikedPurchase}
+      {movieClickedObjectUpComing && movieClickedUpComing !== 'none' && (
+        <div>
+          <div>
+            <h1>{movieClickedObjectUpComing.Title}</h1> <br />
+            <img
+              src={movieClickedObjectUpComing.Poster}
+              alt="failed to load"
+            ></img>
+            <p>
+              Release Date: {movieClickedObjectUpComing.ReleaseDate}
+            </p>
+            <p>Ticket Price: {movieClickedObjectUpComing.Price}</p>
+            <h5>Description:</h5>
+            <p className="description-break">
+              {movieClickedObjectUpComing.Description}
+            </p>
+          </div>
+
+          <br />
+        </div>
+      )}
     </div>
   );
 };
