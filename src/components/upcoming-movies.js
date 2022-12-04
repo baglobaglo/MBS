@@ -23,8 +23,7 @@ const UpcomingMovies = (props) => {
             }}
             className="overlay d-flex align-items-center justify-content"
           >
-            <h6>Info coming: </h6> <br />
-            <p>{upcomingMovies.ReleaseDate}</p>
+            <h3>More info </h3> <br />
           </div>
         </div>
       ))}
