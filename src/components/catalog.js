@@ -178,6 +178,7 @@ const Catalog = () => {
           </button>
           <br />
           <button onClick={ToReview}> Make Review</button>
+          <button onClick= { refreshCatalog }> Return to Catalog </button>
         </div>
       )}
       {clikedPurchase}
