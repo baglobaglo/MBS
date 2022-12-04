@@ -7,8 +7,24 @@ const UpcomingMovies = (props) => {
       {props.upcomingMovies.map((upcomingMovies, index) => (
         <div className="image-container d-flex justify-content-start m-3 width-movies">
           <img src={upcomingMovies.Poster} alt="movie"></img>
-          <div className="overlay d-flex align-items-center justify-content">
-            <h3>More info</h3>
+          {props.isAdmin && (
+            <div
+              className="d-flex align-items-center justify-content overlay-delete"
+              onClick={() => {
+                props.deleteMovieUpComing(upcomingMovies.Title);
+              }}
+            >
+              Delete
+            </div>
+          )}
+          <div
+            onClick={() => {
+              props.moreInformationUpComing(upcomingMovies.Title);
+            }}
+            className="overlay d-flex align-items-center justify-content"
+          >
+            <h6>Info coming: </h6> <br />
+            <p>{upcomingMovies.ReleaseDate}</p>
           </div>
         </div>
       ))}

@@ -9,11 +9,12 @@ const CurrentMovies = (props) => {
           <img src={currentMovies.Poster} alt="movie"></img>
           {props.isAdmin && (
             <div
+              className="d-flex align-items-center justify-content overlay-delete"
               onClick={() => {
                 props.deleteMovie(currentMovies.Title);
               }}
             >
-              Delete me
+              Delete
             </div>
           )}
           <div

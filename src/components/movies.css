@@ -28,3 +28,16 @@
     padding: 30px;
     text-align: center;
 }
+
+.overlay-delete {
+    position: absolute;
+    background-color: rgba(220, 0, 0, 0.7);
+    width: 84%;
+
+    transition: 0.5 ease;
+    opacity: 1;
+    font-size: 25px;
+    color: black;
+    font-weight: 700;
+    padding: 5px;
+}
