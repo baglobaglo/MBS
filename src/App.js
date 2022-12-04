@@ -7,7 +7,6 @@ import Purchase from "./components/purchase";
 import Barcode from "./components/Barcode";
 import AdminLogin from "./components/admin-log-in";
 import Review from "./components/review";
-import AdminHP from "./components/AdminHP";
 
 export default function App() {
   return (
@@ -21,7 +20,6 @@ export default function App() {
         <Route path="/purchase" element={<Purchase />} />
         <Route path="/Barcode" element={<Barcode />} />
         <Route path="/Review" element={<Review />} />
-        <Route path="/AdminHP" element={<AdminHP />} />
       </Routes>
     </div>
   );

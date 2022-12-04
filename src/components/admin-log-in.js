@@ -20,7 +20,7 @@ const AdminLogin = () => {
           text.includes(adminpassword)
         ) {
           //UserIsLoggedIn('/Catalog');
-          toADP('/AdminHP');
+          toADP('/Catalog');
         } else {
           alert('Sorry, but your credentials dont match');
         }
