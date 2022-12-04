@@ -4,12 +4,11 @@ import './general.css';
 import { useNavigate } from 'react-router-dom';
 
 function Review() {
-
   const toCatalog = useNavigate();
   const backToHome = () => {
     alert('review has been made');
     toCatalog('/catalog');
-  }
+  };
   return (
     <div id="purchase-div">
       <h3> MOVIE REVIEW </h3>
@@ -18,7 +17,9 @@ function Review() {
         <form action="/purchase-page">
           <textarea />
           <br />
-          <button type="Submit" onClick={ backToHome }>Submit</button>
+          <button type="Submit" onClick={backToHome}>
+            Submit
+          </button>
         </form>
       </body>
     </div>
