@@ -81,7 +81,12 @@ const Catalog = () => {
   const [movieClickedObject, setMovieClikedObject] = useState();
   const [clikedPurchase, setClickedPurchase] = useState(false);
   const buytickets = useNavigate();
+  const makereview = useNavigate();
 
+
+  const ToReview = () => {
+    makereview('/review');
+  }
   const handlePurchaseButton = () => {
     setClickedPurchase(true);
     setMovieClikedObject();
@@ -134,7 +139,8 @@ const Catalog = () => {
           </div>
           <button onClick={handlePurchaseButton}>
             Click here to buy tickets!
-          </button>
+          </button><br />
+          <button onClick={ ToReview }> Make Review</button>
         </div>
       )}
       {clikedPurchase}
