@@ -6,7 +6,7 @@ function Header() {
   const Login = useNavigate();
 
   const takeMeHome = () => {
-    Login('/Login');
+    Login('/');
   };
 
   const backout = useNavigate();

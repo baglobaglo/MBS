@@ -1,13 +1,13 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Signup from './components/sign-up';
-import Login from './components/login';
-import Catalog from './components/catalog';
-import Purchase from './components/purchase';
-import Barcode from './components/Barcode';
-import AdminLogin from './components/admin-log-in';
-import Review from './components/review';
-import AdminHP from './components/AdminHP';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Signup from "./components/sign-up";
+import Login from "./components/login";
+import Catalog from "./components/catalog";
+import Purchase from "./components/purchase";
+import Barcode from "./components/Barcode";
+import AdminLogin from "./components/admin-log-in";
+import Review from "./components/review";
+import AdminHP from "./components/AdminHP";
 
 export default function App() {
   return (
@@ -15,11 +15,12 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/Signup" element={<Signup />} />
+        <Route path="/AdminLogin" element={<AdminLogin />} />
+
+        {/*protected routes */}
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/purchase" element={<Purchase />} />
-        <Route path="/Login" element={<Login />} />
         <Route path="/Barcode" element={<Barcode />} />
-        <Route path="/AdminLogin" element={<AdminLogin />} />
         <Route path="/Review" element={<Review />} />
         <Route path="/AdminHP" element={<AdminHP />} />
       </Routes>

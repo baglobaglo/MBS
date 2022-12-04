@@ -6,3 +6,13 @@
 .not-a-user {
     margin-left: 40%;
 }
+input
+{
+    background-color: white;
+    color: black;
+    transition-duration: .4ms;
+}
+input:hover
+{
+    background-color: gray;
+}
