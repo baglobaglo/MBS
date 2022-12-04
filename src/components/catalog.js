@@ -159,10 +159,33 @@ const Catalog = () => {
         </div>
       )}
       {isAdmin && (
-        <div className="admin-details container-fluid">
-          <h1>System Manager</h1>
-          <p>Hello hello, work within this div</p>
+        <div>
+        <h1>System Manager</h1> <br/>
+        <div className="admin-details-container-fluid">
+          <div style={{padding: '20px'}}>
+            <h5>Ticket Information</h5>
+            <p> Black Adam: 73 tickets left <br/>
+                Smile: 54 tickets left <br/>
+                Black Panther: 39 tickets left <br/>
+                The Menu: 62 tickets left <br/>
+            </p>
+          </div>
+          <div style={{padding: '20px', marginLeft: '300px'}}>
+            <h5>Employee Information</h5>
+            <p> Lubbock: 22 employees <br/>
+                Amarillo: 15 employees <br/>
+                San Antonio: 19 employees <br/>
+                Odessa: 9 employees (Understaffed) <br/>
+            </p>
+          </div>
+          <div style={{padding: '20px', marginLeft: '290px'}}>
+            <h5>User Information</h5>
+            <p> Active: 517 accounts <br/>
+                Inactive: 43 accounts <br/>
+            </p>
+          </div>
         </div>
+      </div>
       )}
       {movieClicked === 'none' && movieClickedUpComing === 'none' && (
         <div className="container-fluid mbs-show">

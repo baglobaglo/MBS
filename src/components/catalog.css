@@ -18,5 +18,7 @@
     margin-bottom: 10px;
 }
 
-
-
+.admin-details-container-fluid {
+    background-color: bisque;
+    display: flex;
+  }
