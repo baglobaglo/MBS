@@ -1,7 +1,7 @@
 import React from 'react';
 import './login.css';
 import { useState } from 'react';
-import raw from './test.txt';
+import raw from './customer-login.txt';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
@@ -10,14 +10,19 @@ function Login() {
   //const [notuser, setNotuser] = useState(false);
   const UserIsLoggedIn = useNavigate();
   const SignUp = useNavigate();
+  const AdminLogin = useNavigate();
 
   const submitForm = (event) => {
     event.preventDefault();
     fetch(raw)
       .then((r) => r.text())
       .then((text) => {
-        if (text.includes(username) && text.includes(password)) {
-          alert('login');
+        if (username === '' && password === '') {
+          alert('you need to type something');
+        } else if (
+          text.includes(username) &&
+          text.includes(password)
+        ) {
           UserIsLoggedIn('/Catalog');
         } else {
           alert('Sorry, but your credentials dont match');
@@ -28,16 +33,26 @@ function Login() {
     SignUp('/Signup');
   }
 
+  function adminLoginButton() {
+    AdminLogin('/AdminLogin');
+  }
+
   return (
     <div>
       <div className="not-a-user">
         <label type="text">Not a user? </label>
-        <button onClick={() => signUpbutton()}>Sign up</button>
+        <button onClick={() => signUpbutton()}>
+          Sign up
+        </button> <br /> <br />
+        <label type="text">Are you an admin? </label>
+        <button onClick={() => adminLoginButton()}>
+          Admin login
+        </button>
       </div>
 
       <div className="login-div">
         <h3> LOGIN </h3>
-        <form className="login-form" onSubmit={submitForm}>
+        <form className="login-form">
           <label>
             {' '}
             Enter your username/email:
@@ -55,7 +70,7 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <br />
-          <input type="submit" onClick={() => Login()}></input>
+          <input type="submit" onClick={submitForm}></input>
         </form>
       </div>
     </div>
