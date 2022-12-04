@@ -8,6 +8,15 @@
     white-space: pre-wrap;
 }
 
+.adminButton {
+    margin-left: 95%;
+
+}
+
+.admin-details {
+    background-color: bisque;
+    margin-bottom: 10px;
+}
 
 
 
