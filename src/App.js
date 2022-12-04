@@ -17,7 +17,6 @@ export default function App() {
         <Route path="/Signup" element={<Signup />} />
         <Route path="/AdminLogin" element={<AdminLogin />} />
 
-        {/*protected routes */}
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/purchase" element={<Purchase />} />
         <Route path="/Barcode" element={<Barcode />} />
