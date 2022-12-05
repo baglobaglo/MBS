@@ -1,2 +1,2 @@
 ## Movie Booking System
-This is our Movie Booking System (MBS) for CS3365 Software Engineering. Our group has created a system where users can view movies and purchase tickets. They can also read or write reviews for movies. Admins of the system have additional functionality, such as creating or removing shows. 
+This is our Movie Booking System (MBS) for CS3365 Software Engineering. Movie theaters in Texas have noticed that their ticket sales have fallen, so our group has created a system where users can view movies and purchase tickets via a program. They can also read or write reviews for movies. Admins of the system have additional functionality, such as creating or removing shows. 
