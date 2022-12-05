@@ -39,23 +39,14 @@ function Login() {
 
   return (
     <div>
-      <div className="not-a-user">
-        <label type="text">Not a user? </label>
-        <button onClick={() => signUpbutton()}>
-          Sign up
-        </button> <br /> <br />
-        <label type="text">Are you an admin? </label>
-        <button onClick={() => adminLoginButton()}>
-          Admin login
-        </button>
-      </div>
-
       <div className="login-div">
+        {' '}
+        <br />
         <h3> LOGIN </h3>
         <form className="login-form">
           <label>
             {' '}
-            Enter your username/email:
+            Enter your username:
             <input
               value={username}
               type="text"
@@ -69,9 +60,23 @@ function Login() {
             type="password"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <br />
-          <input type="submit" onClick={submitForm}></input>
+          <br /> <br />
+          <div className="login-button">
+            <input type="submit" onClick={submitForm}></input>
+          </div>
         </form>
+      </div>{' '}
+      <br /> <br />
+      <div className="not-a-user">
+        <div className="notauser">
+          <label type="text">Not a user? </label>
+          <button onClick={() => signUpbutton()}>Sign up</button>
+        </div>
+
+        <label type="text">Are you an admin? </label>
+        <button onClick={() => adminLoginButton()}>
+          Admin login
+        </button>
       </div>
     </div>
   );

@@ -96,10 +96,10 @@ const Catalog = () => {
   const buytickets = useNavigate();
   const makereview = useNavigate();
 
-  const refreshCatalog = () =>
-  {
+  const refreshCatalog = () => {
     setMovieClicked('none');
-  }
+    setMovieClickedUpComing('none');
+  };
   const ToReview = () => {
     makereview('/review');
   };
@@ -157,39 +157,40 @@ const Catalog = () => {
 
   return (
     <div className="container-fluid mbs-show">
-      {!isAdmin && removeButton && (
-        <div className="adminButton">
-          <button onClick={activeAdmin}>Activate Admin</button>
-        </div>
-      )}
       {isAdmin && (
         <div>
-        <h1>System Manager</h1> <br/>
-        <div className="admin-details-container-fluid">
-          <div style={{padding: '20px'}}>
-            <h5>Ticket Information</h5>
-            <p> Black Adam: 73 tickets left <br/>
-                Smile: 54 tickets left <br/>
-                Black Panther: 39 tickets left <br/>
-                The Menu: 62 tickets left <br/>
-            </p>
-          </div>
-          <div style={{padding: '20px', marginLeft: '300px'}}>
-            <h5>Employee Information</h5>
-            <p> Lubbock: 22 employees <br/>
-                Amarillo: 15 employees <br/>
-                San Antonio: 19 employees <br/>
-                Odessa: 9 employees (Understaffed) <br/>
-            </p>
-          </div>
-          <div style={{padding: '20px', marginLeft: '290px'}}>
-            <h5>User Information</h5>
-            <p> Active: 517 accounts <br/>
-                Inactive: 43 accounts <br/>
-            </p>
+          <h1>System Manager</h1> <br />
+          <div className="admin-details-container-fluid">
+            <div style={{ padding: '20px' }}>
+              <h5>Ticket Information</h5>
+              <p>
+                {' '}
+                Black Adam: 73 tickets left <br />
+                Smile: 54 tickets left <br />
+                Black Panther: 39 tickets left <br />
+                The Menu: 62 tickets left <br />
+              </p>
+            </div>
+            <div style={{ padding: '20px', marginLeft: '300px' }}>
+              <h5>Employee Information</h5>
+              <p>
+                {' '}
+                Lubbock: 22 employees <br />
+                Amarillo: 15 employees <br />
+                San Antonio: 19 employees <br />
+                Odessa: 9 employees (Understaffed) <br />
+              </p>
+            </div>
+            <div style={{ padding: '20px', marginLeft: '290px' }}>
+              <h5>User Information</h5>
+              <p>
+                {' '}
+                Active: 517 accounts <br />
+                Inactive: 43 accounts <br />
+              </p>
+            </div>
           </div>
         </div>
-      </div>
       )}
       {movieClicked === 'none' && movieClickedUpComing === 'none' && (
         <div className="container-fluid mbs-show">
@@ -203,7 +204,7 @@ const Catalog = () => {
             />
             <br />
           </div>
-          <h2> Upcoming Movies</h2> <br/>
+          <h2> Upcoming Movies</h2> <br />
           <div className="row">
             <UpcomingMovies
               isAdmin={isAdmin}
@@ -233,9 +234,13 @@ const Catalog = () => {
           <button onClick={handlePurchaseButton}>
             Click here to buy tickets!
           </button>
+          <br /> <br />
+          <button onClick={ToReview}> Make Review</button> <br />{' '}
           <br />
-          <button onClick={ToReview}> Make Review</button>
-          <button onClick= { refreshCatalog }> Return to Catalog </button>
+          <button onClick={refreshCatalog}>
+            {' '}
+            Return to Catalog{' '}
+          </button>
         </div>
       )}
       {movieClickedObjectUpComing && movieClickedUpComing !== 'none' && (
@@ -254,9 +259,18 @@ const Catalog = () => {
             <p className="description-break">
               {movieClickedObjectUpComing.Description}
             </p>
+            <button onClick={refreshCatalog}>
+              {' '}
+              Return to Catalog{' '}
+            </button>
           </div>
 
           <br />
+        </div>
+      )}
+      {!isAdmin && removeButton && (
+        <div className="adminButton">
+          <button onClick={activeAdmin}>Activate Admin</button>
         </div>
       )}
     </div>

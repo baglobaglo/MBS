@@ -5,6 +5,8 @@
 
 .not-a-user {
     margin-left: 40%;
+    align-items: center;
+
 }
 input
 {
@@ -16,3 +18,20 @@ input:hover
 {
     background-color: gray;
 }
+
+.login-button {
+    padding-left: 10%;
+}
+
+.notauser {
+padding-left: 10%;
+}
+
+.login-div {
+    border-radius: 30px;;
+    border-color: black;
+    border-style: dashed;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+

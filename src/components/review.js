@@ -13,9 +13,9 @@ function Review() {
     <div id="purchase-div">
       <h3> MOVIE REVIEW </h3>
       <body>
-        <h4> Share your experience! </h4>
+        <h4> Share your experience! </h4> <br />
         <form action="/purchase-page">
-          <textarea cols="40" rows="10"/>
+          <textarea rows="5" cols="25" />
           <br />
           <button type="Submit" onClick={backToHome}>
             Submit
