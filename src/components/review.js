@@ -15,7 +15,7 @@ function Review() {
       <body>
         <h4> Share your experience! </h4>
         <form action="/purchase-page">
-          <textarea />
+          <textarea cols="40" rows="10"/>
           <br />
           <button type="Submit" onClick={backToHome}>
             Submit
