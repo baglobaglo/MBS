@@ -20,14 +20,11 @@ function Signup() {
       registerName.length > 2 &&
       registerEmail.includes('@') &&
       registerHome.length > 2 &&
-      registerPhone.length >= 8
+      registerPhone.length >= 8 &&
+      registerPassword === registerPasswordSecond
     ) {
-      if (registerPassword === registerPasswordSecond) {
-        alert('Register successful!');
-        isRegistered('/Login');
-      } else {
-        alert('Passwords no match');
-      }
+      alert('Register successful!');
+      isRegistered('/');
     } else {
       alert('Check the information provided');
     }
