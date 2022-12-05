@@ -12,22 +12,16 @@ function Purchase() {
   const [tickets, setTickets] = useState(0);
   const toBc = useNavigate();
 
-//
-  function toBar()
-  {
+  //
+  function toBar() {
     toBc('/Barcode');
   }
 
   const ticketAmount = () => {
-    if (
-      tickets > 9
-    )
-    {
+    if (tickets > 9) {
       alert('Cannot purchase more than 10 at one time.');
-      
-    }
-    else  setTickets(tickets + 1);
-  }
+    } else setTickets(tickets + 1);
+  };
 
   const purchase = () => {
     if (
@@ -35,12 +29,10 @@ function Purchase() {
       cardNumber.length === 16 &&
       expDate.length === 5 &&
       cardCVS.length === 3
-    )
-    {
+    ) {
       alert('Payment successful!');
       toBar();
-    }
-    else alert('Check the information provided.');
+    } else alert('Check the information provided.');
   };
 
   return (
@@ -48,7 +40,7 @@ function Purchase() {
       <h3> PURCHASE TICKETS </h3> <br />
       <body>
         <div className="tickets-details">
-          <h6>How many ticket do you want?</h6>
+          <h6>How many tickets do you want?</h6>
           <button onClick={() => ticketAmount()}>+</button>
           <p>
             Number of tickets: {tickets} <br /> Tickets left for this
@@ -100,8 +92,13 @@ function Purchase() {
             onChange={(e) => setCardCVS(e.target.value)}
           />{' '}
           <br />
-          <button type="Submit" onClick={() => purchase()}> Submit </button> {//add link to barcode once added
-}
+          <button type="Submit" onClick={() => purchase()}>
+            {' '}
+            Submit{' '}
+          </button>{' '}
+          {
+            //add link to barcode once added
+          }
         </form>
       </body>
     </div>

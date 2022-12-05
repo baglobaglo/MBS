@@ -157,11 +157,6 @@ const Catalog = () => {
 
   return (
     <div className="container-fluid mbs-show">
-      {!isAdmin && removeButton && (
-        <div className="adminButton">
-          <button onClick={activeAdmin}>Activate Admin</button>
-        </div>
-      )}
       {isAdmin && (
         <div>
           <h1>System Manager</h1> <br />
@@ -209,7 +204,7 @@ const Catalog = () => {
             />
             <br />
           </div>
-          <h2> Upcoming Movies</h2> <br/>
+          <h2> Upcoming Movies</h2> <br />
           <div className="row">
             <UpcomingMovies
               isAdmin={isAdmin}
@@ -239,7 +234,7 @@ const Catalog = () => {
           <button onClick={handlePurchaseButton}>
             Click here to buy tickets!
           </button>
-          <br />
+          <br /> <br />
           <button onClick={ToReview}> Make Review</button> <br />{' '}
           <br />
           <button onClick={refreshCatalog}>
@@ -271,6 +266,11 @@ const Catalog = () => {
           </div>
 
           <br />
+        </div>
+      )}
+      {!isAdmin && removeButton && (
+        <div className="adminButton">
+          <button onClick={activeAdmin}>Activate Admin</button>
         </div>
       )}
     </div>
