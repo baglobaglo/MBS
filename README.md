@@ -7,5 +7,5 @@ This is our Movie Booking System (MBS) for CS3365 Software Engineering. Movie th
 <h1> Catalog Page </h1>
 <img width="1216" alt="Screenshot 2022-12-05 at 15 39 52" src="https://user-images.githubusercontent.com/98468200/205748140-c0677c8d-8470-438d-8687-f746a01ac423.png">
 
-<h1> Movie Details </h1>
+<h1> Movie Details Page </h1>
 <img width="1216" alt="Screenshot 2022-12-05 at 15 40 11" src="https://user-images.githubusercontent.com/98468200/205748153-3d1e1286-85fb-4844-9fca-56958f1c0c1a.png">
