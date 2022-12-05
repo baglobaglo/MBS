@@ -7,6 +7,16 @@ const CurrentMovies = (props) => {
       {props.currentMovies.map((currentMovies, index) => (
         <div className="image-container d-flex justify-content-start m-3 width-movies">
           <img src={currentMovies.Poster} alt="movie"></img>
+          {props.isAdmin && (
+            <div
+              className="d-flex align-items-center justify-content overlay-delete"
+              onClick={() => {
+                props.deleteMovie(currentMovies.Title);
+              }}
+            >
+              Delete
+            </div>
+          )}
           <div
             onClick={() => {
               props.moreInformation(currentMovies.Title);

@@ -21,3 +21,14 @@ div{
 {
     padding-left: 40%;
 }
+button
+{
+    background-color: white;
+    color: black;
+    transition-duration: .4ms;
+    
+}
+button:hover
+{
+    background-color:gray;
+}

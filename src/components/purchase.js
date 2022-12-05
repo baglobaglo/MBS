@@ -12,7 +12,7 @@ function Purchase() {
   const [tickets, setTickets] = useState(0);
   const toBc = useNavigate();
 
-
+//
   function toBar()
   {
     toBc('/Barcode');
