@@ -209,7 +209,7 @@ const Catalog = () => {
             />
             <br />
           </div>
-          <h2> Upcoming Movies</h2> <br />
+          <h2> Upcoming Movies</h2> <br/>
           <div className="row">
             <UpcomingMovies
               isAdmin={isAdmin}
