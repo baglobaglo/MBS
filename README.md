@@ -1,8 +1,2 @@
 ## Movie Booking System
-Testing
-poo
-bruh
-who wants to play 🎱 tomorrow?
-my nig
-how companies see you when you know git bash in norway: 🤴🏼
-when you don't know git bash: 🤡
+This is our Movie Booking System (MBS) for CS3365 Software Engineering. Our group has created a system where users can view movies and purchase tickets. They can also read or write reviews for movies. Admins of the system have additional functionality, such as creating or removing shows. 
